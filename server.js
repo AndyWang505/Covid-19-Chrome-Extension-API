@@ -10,7 +10,7 @@ app.get('/api', (req,res) => {
     res.send("[]");
 });
 
-// server started
+// Server running on port: http://localhost:5000/
 app.listen(POST, () => {
     console.log(`Server running on port: http://localhost:${POST}/`);
 });
