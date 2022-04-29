@@ -2,7 +2,7 @@ const express = require("express");
 const apiRouter = require("./routes/api")
 
 const app = express();
-const port = 3000;
+const POST = process.env.PORT || 5000;
 //start using apiRouter
 app.use('/api', apiRouter);
 
@@ -11,6 +11,6 @@ app.get('/api', (req,res) => {
 });
 
 // server started
-app.listen(port, () => {
-    console.log(`Server running on port: http://localhost:${port}/`);
+app.listen(POST, () => {
+    console.log(`Server running on port: http://localhost:${POST}/`);
 });
