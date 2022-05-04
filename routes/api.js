@@ -4,79 +4,10 @@ const axios = require("axios");
 const router = express.Router();
 
 const data = [
-    {
-        confirmed:"",
-        recovered:"",
-        deaths:""
-    },
+    {},
     {
         allCountry:[
-            {
-                count:"",
-            },
-            {
-                count:"",
-            },
-            {
-                count:"",
-            },
-            {
-                count:"",
-            },
-            {
-                count:"",
-            },
-            {
-                count:"",
-            },
-            {
-                count:"",
-            },
-            {
-                count:"",
-            },
-            {
-                count:"",
-            },
-            {
-                count:"",
-            },
-            {
-                count:"",
-            },
-            {
-                count:"",
-            },
-            {
-                count:"",
-            },
-            {
-                count:"",
-            },
-            {
-                count:"",
-            },
-            {
-                count:"",
-            },
-            {
-                count:"",
-            },
-            {
-                count:"",
-            },
-            {
-                count:"",
-            },
-            {
-                count:"",
-            },
-            {
-                count:"",
-            },
-            {
-                count:""
-            }
+            {},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{}
         ]
     }
 ];
@@ -106,10 +37,10 @@ async function getPage() {
         }
     });
 };
-getPage();
 
 // https://localhost:3000/api/covid-19
-router.get('/covid-19', function(req,res,next) {
+router.get('/covid-19', async function(req,res,next) {
+    await getPage();
     res.send({
         success: true,
         data
