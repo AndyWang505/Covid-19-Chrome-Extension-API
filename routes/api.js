@@ -6,9 +6,7 @@ const router = express.Router();
 const data = [
     {},
     {
-        allCountry:[
-            {},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{}
-        ]
+        allCountry:[{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{}]
     }
 ];
 // console.log(data);
@@ -23,9 +21,11 @@ async function getPage() {
     data[0].confirmed = confirmed;
     data[0].recovered = recovered;
     data[0].deaths = deaths;
-    // console.log(data[0].confirmed);
-    // console.log(data[0].recovered);
-    // console.log(data[0].deaths);
+    // data.push({
+    //     confirmed: confirmed,
+    //     recovered: recovered,
+    //     deaths: deaths
+    // });
 
     let country = ["新北市","台北市","桃園市","苗栗縣","基隆市","彰化縣","台中市","宜蘭縣","新竹縣","花蓮縣","高雄市","台南市","新竹市","屏東縣","南投縣","台東縣","雲林縣","嘉義縣","嘉義市","澎湖縣","連江縣","金門縣"];
     //遍歷所有標籤
