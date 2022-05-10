@@ -47,4 +47,8 @@ router.get('/covid-19', async function(req,res,next) {
     }).end();
 });
 
+
+setInterval( () => {
+    getPage();
+},30000);
 module.exports = router;
